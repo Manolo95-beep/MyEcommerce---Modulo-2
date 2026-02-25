@@ -101,9 +101,10 @@ button:hover{
 }
 
 
-li{
+ul{
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
 
 }
 
@@ -126,7 +127,13 @@ footer{
         column-gap: 1rem;
     }
     main{
-        grid-template-columns: 20% 1fr;
+        grid-template-columns: auto;
+        grid-template-rows:1fr 4fr auto 2fr;
+        grid-template-areas: 
+            "navbar"
+            "aside"
+            "section"
+            "footer";
     }
 }
 
@@ -138,9 +145,7 @@ footer{
         row-gap: 2rem;
         column-gap: 1rem;
     }
-    main{
-        grid-template-columns: 15% 1fr;
-    }
+    
 }
 
 @media(min-width:1044px){
